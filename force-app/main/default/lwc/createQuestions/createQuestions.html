@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+        <h3 slot="title">
+            <lightning-icon icon-name="utility:question" size="small"></lightning-icon>
+            Questions
+        </h3>        
+        <div class="slds-p-around_medium">
+            <div if:true={questionsCreated}>
+                Questions have been created
+            </div>
+            <div if:false={questionsCreated}>
+                <lightning-button label="Click to create questions" 
+                                onclick={handleCreateQuestions}>
+                </lightning-button>
+            </div>    
+        </div>
+        <p slot="footer"><a href="https://bobbuzz.me.uk/LWCFlow">Blog Post</a></p>
+    </lightning-card>
+</template>
